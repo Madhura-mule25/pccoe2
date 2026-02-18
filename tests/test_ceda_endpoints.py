@@ -1,6 +1,7 @@
+import os
 import requests
 
-API_KEY = "0690a8ea7cd6986959695fa658783ca8244ff1999766b34dcb3d0d6c84d1e31b"
+API_KEY = os.getenv("CEDA_API_KEY", "")
 
 print("🔍 Testing CEDA API Endpoints...")
 print("=" * 70)

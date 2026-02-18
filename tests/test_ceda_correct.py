@@ -1,7 +1,8 @@
+import os
 import requests
 import pandas as pd
 
-API_KEY = "0690a8ea7cd6986959695fa658783ca8244ff1999766b34dcb3d0d6c84d1e31b"
+API_KEY = os.getenv("CEDA_API_KEY", "")
 
 print("=" * 70)
 print("🧪 Testing CEDA Agmarknet API (Correct Endpoints)")
