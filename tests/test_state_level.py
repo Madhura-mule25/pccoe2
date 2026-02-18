@@ -1,7 +1,8 @@
+import os
 import requests
 
 BASE = 'https://api.ceda.ashoka.edu.in/v1'
-H = {'Authorization': 'Bearer 0690a8ea7cd6986959695fa658783ca8244ff1999766b34dcb3d0d6c84d1e31b'}
+H = {'Authorization': f'Bearer {os.getenv("CEDA_API_KEY", "")}'}
 
 # Try state-level data (no district/market filter)
 r = requests.post(BASE+'/agmarknet/prices', headers=H, json={

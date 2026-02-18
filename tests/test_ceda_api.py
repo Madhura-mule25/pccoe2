@@ -1,3 +1,4 @@
+import os
 import requests
 import pandas as pd
 from datetime import datetime
@@ -7,7 +8,7 @@ print("🧪 Testing CEDA API (Ashoka University - Agmarknet Mirror)")
 print("=" * 70)
 
 API_URL = "https://api.ceda.ashoka.edu.in/agmarknet/v1/data"
-API_KEY = "0690a8ea7cd6986959695fa658783ca8244ff1999766b34dcb3d0d6c84d1e31b"
+API_KEY = os.getenv("CEDA_API_KEY", "")
 
 # Test 1: Basic API call
 print("\n1️⃣ Testing Basic API Connection...")
